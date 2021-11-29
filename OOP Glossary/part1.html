@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+        crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <title>Index Page</title>
+  <style>
+    .code_text {
+      font-size: 16px;
+      color: white;
+      font-family: Courier, serif;
+      padding-left: 10px;
+      line-height: 30px;
+    }
+
+    .card-text {
+      font-size: 18px;
+      padding-top: 10px;
+    }
+
+    p span {
+      background-color: #2e2928;
+    }
+
+    img {
+      height: 200px;
+      width: 650px;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light sticky-top" style="background-color:aliceblue">
+  <a class="navbar-brand mb-0 h1" href="#">IS601</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link " href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="team.html">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
+           aria-haspopup="true" aria-expanded="false">
+          Project 2
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+          <a class="dropdown-item" href="part1.html">Part 1: OOP Glossary and Pylint tips </a>
+          <a class="dropdown-item" href="part2.html">Part 2: AAA Testing </a>
+          <a class="dropdown-item" href="part3.html">Part 3: EIAP concepts</a>
+          <a class="dropdown-item" href="part4.html">Part 4: Design Pattern</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="jumbotron text-center">
+  <h1 class="display-5">Pylint Tutorial</h1>
+  <p class="lead">This is an article to give new users some tips and tricks about Pylint.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-20">
+      <div class="card">
+        <h5 class="card-header">About-</h5>
+        <div class="card-body">
+          <p class="card-text">Pylint is a Python tool that checks a module for coding standards.</p>
+          <p class="card-text">According to the project coding guidelines, PEP8 is the standard and pylint is
+            a
+            good mechanical test to help us in attaining that goal.
+            The range of checks run from Python errors, missing docstrings, unused imports, unintended
+            redefinition of
+            built-ins, to bad naming and more.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">Installation-</h5>
+        <div class="card-body">
+          <p class="card-text">To install pylint, run the simple installation code below.</p>
+          <p class="code_text"><b><span>pip install pylint</span></b></p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">Invoking Pylint-</h5>
+        <div class="card-body">
+          <p class="card-text">Pylint is meant to be called from the command line. The usage is:</p>
+          <p class="code_text"><b><span>pylint [options] modules_or_packages</span></b></p>
+          <p class="card-text">It is also possible to analyze Python files, with a few restrictions. The thing
+            to keep in
+            mind is that Pylint will try to convert the file name to a module name, and only be able to
+            process the file
+            if it succeeds.</p>
+          <p class="code_text"><b><span>pylint function.py</span></b></p>
+          <p class="card-text">should always work since the current working directory is automatically added
+            on top of the
+            python path.</p>
+          <p class="code_text"><b><span>pylint directory/mymodule.py</span></b></p>
+          <p class="card-text">will work if directory is a python package (i.e. has an __init__.py file or it
+            is an
+            implicit namespace package) or if "directory" is in the python path.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">Pylint test-</h5>
+        <div class="card-body">
+          <p class="card-text">Here you can see one of my code snippets, I have commented out the docstring on
+            purpose in order to demonstrate pylint testing:</p>
+          <img src="images/pylint_code.PNG" alt="code snippet">
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">Pylint test result-</h5>
+        <div class="card-body">
+          <p class="card-text">And here below you can see how pylint shows me that I have not maintained the
+            uniformity of the code and skipped the docstring on one of my functions:</p>
+          <img src="images/pylint_error.PNG" alt="code error">
+          <p class="card-text"><b>Hence,</b></p>
+          <p class="card-text">It is important that one uses Pylint to know whether they have been writing
+            clean and efficient code. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr class="my-4">
+<div class="jumbotron text-center">
+  <h1 class="display-5">A Glossary of Object-Oriented Programming Terms</h1>
+  <p class="lead">This is a glossary so that you understand OOP terminologies better.</p>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-20">
+      <div class="card">
+        <h5 class="card-header">1. Objects-</h5>
+        <div class="card-body">
+          <p class="card-text">A unique instance of a data structure that's defined by its class. An object
+            comprises both
+            data members (class variables and instance variables) and methods.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">2. Classes-</h5>
+        <div class="card-body">
+          <p class="card-text">A user-defined prototype for an object that defines a set of attributes that
+            characterize
+            any object of the class. The attributes are data members (class variables and instance
+            variables) and
+            methods, accessed via dot notation.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">3. Methods-</h5>
+        <div class="card-body">
+          <p class="card-text"> A special kind of function that is defined in a class definition.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">4. Instance-</h5>
+        <div class="card-body">
+          <p class="card-text"> An individual object of a certain class. An object obj that belongs to a class
+            Circle, for
+            example, is an instance of the class Circle.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">5. Constructor-</h5>
+        <div class="card-body">
+          <p class="card-text">Constructors are generally used for instantiating an object. The task of
+            constructors is to
+            initialize(assign values) to the data members of the class when an object of the class is
+            created. In Python
+            the __init__() method is called the constructor and is always called when an object is
+            created.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">6. Namespace-</h5>
+        <div class="card-body">
+          <p class="card-text">A namespace is a collection of currently defined symbolic names along with
+            information
+            about the object that each name references. You can think of a namespace as a dictionary in
+            which the keys
+            are the object names and the values are the objects themselves. Each key-value pair maps a name
+            to its
+            corresponding object.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">7. Factory Method-</h5>
+        <div class="card-body">
+          <p class="card-text">Factory Method defines a method, which should be used for creating objects
+            instead of
+            direct constructor call.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">8. Static Method-</h5>
+        <div class="card-body">
+          <p class="card-text">Static methods, much like class methods, are methods that are bound to a class
+            rather than
+            its object.
+            They do not require a class instance creation. So, they are not dependent on the state of the
+            object.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">9. Class method-</h5>
+        <div class="card-body">
+          <p class="card-text">A class method is a method which is bound to the class and not the object of
+            the class.
+            They have the access to the state of the class as it takes a class parameter that points to the
+            class and
+            not the object instance.
+            It can modify a class state that would apply across all the instances of the class.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">10. Unit tests-</h5>
+        <div class="card-body">
+          <p class="card-text">Unit tests allows the testing of self-contained units of your code independent
+            of each
+            other. To test your code with the unit testing method, you create test classes and test methods
+            of each
+            class individually to see if they are functioning right independently.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">11. Design patterns-</h5>
+        <div class="card-body">
+          <p class="card-text">Design Patterns is the most essential part of Software Engineering, as they
+            provide the
+            general repeatable solution to a commonly occurring problem in software design. They usually
+            represent some
+            of the best practices adopted by experienced object-oriented software developers. We can not
+            consider the
+            Design Patterns as the finished design that can be directly converted into code. They are only
+            templates
+            that describe how to solve a particular problem with great efficiency.</p>
+        </div>
+      </div>
+      <div class="card">
+        <h5 class="card-header">12. Facade-</h5>
+        <div class="card-body">
+          <p class="card-text">Facade is a structural design pattern that provides a simplified (but limited)
+            interface to
+            a complex system of classes, library or framework.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="card text-center">
+  <div class="card-footer text-dark">
+    Myles Dsouza &#169;
+    <a href="https://validator.w3.org/#validate_by_uri">W3C Validator</a>
+  </div>
+</div>
+</body>
+</html>
